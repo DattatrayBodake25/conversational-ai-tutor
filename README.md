@@ -52,14 +52,14 @@ Build a **Conversational AI Tutor** that can:
 ## Project Structure  
 ```
 conversational-ai-tutor/
-├── backend/ # FastAPI backend
+├── backend/                                                     # FastAPI backend
 │ ├── init.py
-│ ├── main.py # FastAPI app entry point
-│ ├── rag_pipeline.py # RAG graph / LangChain integration
-│ ├── stt.py # Whisper STT
-│ ├── tts.py # pyttsx3 TTS
+│ ├── main.py                                                    # FastAPI app entry point
+│ ├── rag_pipeline.py                                            # RAG graph / LangChain integration
+│ ├── stt.py                                                     # Whisper STT
+│ ├── tts.py                                                     # pyttsx3 TTS or gTTS
 │
-├── frontend/ # React frontend
+├── frontend/                                                    # React frontend
 │ ├── public/
 │ │ └── index.html
 │ ├── src/
@@ -71,23 +71,23 @@ conversational-ai-tutor/
 │ │ │ │ ├── Controls.css
 │ │ │ │ ├── StatusIndicator.js
 │ │ │ │ ├── StatusIndicator.css
-│ │ │ │ ├── LipSyncHandler.js # Optional advanced animation handling
-│ │ │ │ └── TypingIndicator.js # Optional typing animation
+│ │ │ │ ├── LipSyncHandler.js                                    # Optional advanced animation handling
+│ │ │ │ └── TypingIndicator.js                                   # Optional typing animation
 │ │ ├── utils/
-│ │ │ ├── speechUtils.js # Browser STT/TTS utilities
-│ │ │ ├── apiUtils.js # API call utilities
-│ │ │ └── tts.js # Optional TTS handler
+│ │ │ ├── speechUtils.js                                         # Browser STT/TTS utilities
+│ │ │ ├── apiUtils.js                                            # API call utilities
+│ │ │ └── tts.js                                                 # Optional TTS handler
 │ │ ├── App.js
 │ │ ├── App.css
 │ │ └── index.js
-│ ├── .env # REACT_APP_API_URL pointing to backend
+│ ├── .env                                                       # REACT_APP_API_URL pointing to backend
 │ ├── package.json
 │ └── README.md
 │
-├── vector_store/ # FAISS vector DB files
-├── knowledge_base/ # Embedded documents / knowledge files
-├── .env # Backend environment config
-├── requirements.txt # Python dependencies for backend
+├── vector_store/                                                # FAISS vector DB files
+├── knowledge_base/                                              # Embedded documents / knowledge files
+├── .env                                                         # Backend environment config
+├── requirements.txt                                             # Python dependencies for backend
 └── README.md
 ```
 
@@ -216,6 +216,7 @@ https://conversational-ai-tutor.onrender.com/docs
 3. Backend (RAG) retrieves & generates response.
 4. Returns { "answer": "...", "emotion": "happy" }.
 5. Mascot speaks the response with lip-sync + emotion.
+
 
 
 
