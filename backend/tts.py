@@ -1,23 +1,25 @@
-#import library
-import pyttsx3
+# backend/tts.py
+from gtts import gTTS
+import tempfile
+import os
 
-# Initialize TTS engine once
-engine = pyttsx3.init()
-
-# Optional: Configure voice properties
-engine.setProperty('rate', 150) 
-engine.setProperty('volume', 1.0)
-
-def speak_text(text: str, wait: bool = True):
+def speak_text(text: str, lang: str = "en"):
     """
-    Converts text to speech.
-    
+    Converts text to speech using gTTS.
+    Saves audio to a temporary MP3 file and returns the file path.
+
     Args:
-        text (str): The text to speak.
-        wait (bool): Whether to wait until speech is finished (default: True).
+        text (str): The text to convert to speech.
+        lang (str): Language code (default: "en").
+    
+    Returns:
+        str: Path to the generated MP3 file.
     """
-    engine.say(text)
-    if wait:
-        engine.runAndWait()
-    else:
-        engine.startLoop(False)
+    # Create temporary file
+    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".mp3")
+    
+    # Generate speech
+    tts = gTTS(text=text, lang=lang)
+    tts.save(temp_file.name)
+    
+    return temp_file.name
