@@ -150,7 +150,8 @@ uvicorn main:app --reload --port 8000
 Backend will run at: http://127.0.0.1:8000
 Swagger Docs: http://127.0.0.1:8000/docs
 
-2️⃣ Frontend (React)
+### 2. Frontend (React)
+```bash
 cd conversational-ai-tutor/frontend
 
 # Install dependencies
@@ -158,77 +159,65 @@ npm install
 
 # Start frontend
 npm start
+```
 
+Frontend will run at: http://localhost:3000
 
-Frontend will run at: 👉 http://localhost:3000
+## Live Deployment
 
-🌍 Live Deployment
+- Backend (Render): https://conversational-ai-tutor.onrender.com/
+- Frontend (Vercel): https://conversational-ai-tutor.vercel.app/
 
-Backend (Render): https://conversational-ai-tutor.onrender.com/
-
-Frontend (Vercel): https://conversational-ai-tutor.vercel.app/
-
-📡 API Endpoints
-🔹 1. Query Endpoint
-
+## API Endpoints
+1. Query Endpoint
 POST https://conversational-ai-tutor.onrender.com/query
 
 Headers:
-
+```bash
 Content-Type: application/json
-
-
+```
 Body Example:
-
+```
 {
   "question": "What is sustainable agriculture and how does it differ from the Green Revolution?"
 }
-
-
+```
 Response Example:
-
+```
 {
   "answer": "Sustainable agriculture focuses on long-term ecological balance...",
   "emotion": "explaining"
 }
+```
 
-🔹 2. Chat Endpoint
-
+2. Chat Endpoint
 POST https://conversational-ai-tutor.onrender.com/chat
 
 Supports multi-turn conversations.
 
-🔹 3. API Docs
-
+3. API Docs
 Swagger API Docs available at:
-👉 https://conversational-ai-tutor.onrender.com/docs
+```
+https://conversational-ai-tutor.onrender.com/docs
+```
 
-🧪 Testing with Postman
+## Testing with Postman
+1. Open Postman.
+2. Create a POST request to:
+   - https://conversational-ai-tutor.onrender.com/query
+   - https://conversational-ai-tutor.onrender.com/chat
+3. Add Header: Content-Type: application/json.
+4. Add request Body with JSON question.
+5. Click Send → Get AI Tutor response.
 
-Open Postman.
+## Mascot UI Flow
+1. Click 🎤 Mic Button → Speak a question.
+2. Browser STT transcribes → sends to Backend.
+3. Backend (RAG) retrieves & generates response.
+4. Returns { "answer": "...", "emotion": "happy" }.
+5. Mascot speaks the response with lip-sync + emotion.
 
-Create a POST request to:
 
-https://conversational-ai-tutor.onrender.com/query
 
-https://conversational-ai-tutor.onrender.com/chat
-
-Add Header: Content-Type: application/json.
-
-Add request Body with JSON question.
-
-Click Send → Get AI Tutor response.
-
-🎭 Mascot UI Flow
-
-Click 🎤 Mic Button → Speak a question.
-
-Browser STT transcribes → sends to Backend.
-
-Backend (RAG) retrieves & generates response.
-
-Returns { "answer": "...", "emotion": "happy" }.
-
-Mascot speaks the response with lip-sync + emotion.
 
 
