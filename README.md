@@ -219,6 +219,11 @@ https://conversational-ai-tutor.onrender.com/docs
 5. Mascot speaks the response with lip-sync + emotion.
 
 
+## Future Enhancements
+1. Integrate advanced TTS (e.g., ElevenLabs / Coqui TTS for natural voices).
+2. Add support for multiple subjects/domains in knowledge base.
+3. Improve mascot animations with real-time lip-sync.
+4. Add authentication and user history tracking.
 
 
 
