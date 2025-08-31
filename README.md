@@ -41,7 +41,7 @@ Build a **Conversational AI Tutor** that can:
 
 ---
 
-## 🛠️ Tech Stack  
+## Tech Stack  
 
 - **Backend**: FastAPI, LangChain, FAISS, Whisper (STT), pyttsx3 (TTS)  
 - **Frontend**: React.js, Web Audio API, Lottie/Canvas animations  
@@ -216,6 +216,7 @@ https://conversational-ai-tutor.onrender.com/docs
 3. Backend (RAG) retrieves & generates response.
 4. Returns { "answer": "...", "emotion": "happy" }.
 5. Mascot speaks the response with lip-sync + emotion.
+
 
 
 
