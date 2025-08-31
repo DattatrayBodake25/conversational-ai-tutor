@@ -10,7 +10,10 @@ from backend.rag_pipeline import rag_graph
 app = FastAPI(title="AI Tutor Mascot API")
 
 # Enable CORS so frontend can call backend
-origins = ["http://localhost:3000"]
+origins = [
+    "http://localhost:3000",  # local development
+    "https://conversational-ai-tutor.vercel.app"  # your deployed frontend
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
