@@ -3,7 +3,6 @@
 An **AI-powered conversational tutor** with **RAG backend, Speech-to-Text (STT), Text-to-Speech (TTS), and an animated mascot frontend**.  
 This project was built as part of an **AI assignment challenge** to demonstrate **end-to-end AI system design, API integration, and deployment**.  
 
-🌐 **Live Demo**: [Conversational AI Tutor](https://conversational-ai-tutor.vercel.app/)  
 🔗 **Backend API**: [FastAPI Backend on Render](https://conversational-ai-tutor.onrender.com/)  
 
 ---
@@ -231,3 +230,4 @@ Backend (RAG) retrieves & generates response.
 Returns { "answer": "...", "emotion": "happy" }.
 
 Mascot speaks the response with lip-sync + emotion.
+
