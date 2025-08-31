@@ -166,8 +166,8 @@ Frontend will run at: http://localhost:3000
 ## Live Deployment
 
 - Backend (Render): https://conversational-ai-tutor.onrender.com/
-- Frontend (Vercel): https://conversational-ai-tutor.vercel.app/
-
+- Frontend (Vercel)
+  
 ## API Endpoints
 1. Query Endpoint
 POST https://conversational-ai-tutor.onrender.com/query
@@ -216,6 +216,7 @@ https://conversational-ai-tutor.onrender.com/docs
 3. Backend (RAG) retrieves & generates response.
 4. Returns { "answer": "...", "emotion": "happy" }.
 5. Mascot speaks the response with lip-sync + emotion.
+
 
 
 
