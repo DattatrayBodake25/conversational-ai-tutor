@@ -1,13 +1,13 @@
-# 🎓 Conversational AI Tutor  
+# Conversational AI Tutor  
 
 An **AI-powered conversational tutor** with **RAG backend, Speech-to-Text (STT), Text-to-Speech (TTS), and an animated mascot frontend**.  
 This project was built as part of an **AI assignment challenge** to demonstrate **end-to-end AI system design, API integration, and deployment**.  
 
-🔗 **Backend API**: [FastAPI Backend on Render](https://conversational-ai-tutor.onrender.com/)  
+**Backend API**: [FastAPI Backend on Render](https://conversational-ai-tutor.onrender.com/)  
 
 ---
 
-## 📌 Objective  
+## Objective  
 
 Build a **Conversational AI Tutor** that can:  
 - Answer user queries using **RAG (Retrieval Augmented Generation)**.  
@@ -17,25 +17,25 @@ Build a **Conversational AI Tutor** that can:
 
 ---
 
-## ⚡ Features  
+## Features  
 
-✅ **Backend (FastAPI + LangChain RAG + FAISS Vector DB)**  
+**Backend (FastAPI + LangChain RAG + FAISS Vector DB)**  
 - `/query` → Single query answering  
 - `/chat` → Multi-turn conversational memory  
 - Returns **answer + emotion state** (happy, thinking, explaining)  
 
-✅ **Speech Recognition (STT)**  
+**Speech Recognition (STT)**  
 - Implemented using **OpenAI Whisper**  
 
-✅ **Text-to-Speech (TTS)**  
+**Text-to-Speech (TTS)**  
 - Implemented using **pyttsx3 (offline TTS)**  
 
-✅ **Frontend (React)**  
+**Frontend (React)**  
 - Animated **Mascot UI**  
 - **Mic button** → Speak → STT → Backend → Mascot speaks & animates  
 - Supports **lip-sync and emotion-based facial animations**  
 
-✅ **Deployment**  
+**Deployment**  
 - Backend deployed on **Render**  
 - Frontend deployed on **Vercel**  
 
@@ -49,7 +49,7 @@ Build a **Conversational AI Tutor** that can:
 
 ---
 
-## 📂 Project Structure  
+## Project Structure  
 ```
 conversational-ai-tutor/
 ├── backend/ # FastAPI backend
@@ -129,7 +129,7 @@ flowchart TD
 
 ## ⚙️ Local Setup  
 
-### 1️⃣ Backend (FastAPI)  
+### 1️. Backend (FastAPI)  
 
 ```bash
 # Clone repository
@@ -230,4 +230,5 @@ Backend (RAG) retrieves & generates response.
 Returns { "answer": "...", "emotion": "happy" }.
 
 Mascot speaks the response with lip-sync + emotion.
+
 
