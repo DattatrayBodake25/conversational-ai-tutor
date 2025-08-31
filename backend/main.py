@@ -19,6 +19,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Root endpoint: simple status check
+@app.get("/")
+def root():
+    return {"status": "AI Tutor Backend Running!"}
+
 # Request models
 class QueryRequest(BaseModel):
     question: str
