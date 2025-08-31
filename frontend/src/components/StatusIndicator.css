@@ -1,0 +1,21 @@
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 2px currentColor;
+  }
+  to {
+    box-shadow: 0 0 8px currentColor;
+  }
+}

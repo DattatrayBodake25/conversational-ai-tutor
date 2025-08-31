@@ -1,0 +1,204 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.conversation-panel {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  max-width: 80%;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message.user {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.message.ai {
+  background-color: white;
+  color: #2d3748;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.message p {
+  margin: 0;
+}
+
+.emotion-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(238, 90, 36, 0.3);
+}
+
+.mascot-container {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom scrollbar for conversation panel */
+.conversation-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.conversation-panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.conversation-panel::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.5);
+  border-radius: 10px;
+}
+
+.conversation-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 126, 234, 0.7);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .mascot-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .conversation-panel {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 0.8rem 1.2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+}
+
+/* Animation for new messages */
+.message:last-child {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Status indicator styles */
+.status-indicator {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.status-indicator.listening {
+  background: rgba(236, 100, 75, 0.3);
+  color: #ffddd2;
+}
+
+.status-indicator.processing {
+  background: rgba(249, 191, 59, 0.3);
+  color: #ffeaa7;
+}
+
+.status-indicator.speaking {
+  background: rgba(85, 239, 196, 0.3);
+  color: #55efc4;
+}
+
+.status-indicator.error {
+  background: rgba(214, 48, 49, 0.3);
+  color: #ff7675;
+}

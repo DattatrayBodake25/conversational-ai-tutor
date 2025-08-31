@@ -1,0 +1,49 @@
+# --------------------
+# Python / FastAPI backend
+# --------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+instance/
+.env
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Vector DB (FAISS or others)
+vector_store/
+
+# --------------------
+# Node / React frontend
+# --------------------
+node_modules/
+build/
+dist/
+.npm/
+.cache/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --------------------
+# OS / Editor files
+# --------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
