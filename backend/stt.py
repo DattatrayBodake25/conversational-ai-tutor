@@ -5,7 +5,7 @@ import sounddevice as sd
 import wavio
 
 # Load Whisper model (can use smaller model for faster processing)
-model = whisper.load_model("base")
+model = whisper.load_model("tiny")
 
 def listen_from_mic(duration=5, fs=16000) -> str:
     """
