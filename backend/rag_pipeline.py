@@ -1,4 +1,4 @@
-#importing all libraries
+# importing all libraries
 import os
 import re
 import string
@@ -101,7 +101,12 @@ class State(TypedDict):
     answer: str
 
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+# ✅ Added max_tokens to limit output length
+llm = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0,
+    max_tokens=200
+)
 
 
 def retrieve(state: State):
@@ -122,8 +127,11 @@ def generate(state: State):
         return {"answer": "Sorry, no relevant information found."}
 
     docs_content = "\n\n".join(doc.page_content for doc in state["context"])
+
+    # ✅ Updated prompt for concise answers
     template = """
     You are an AI tutor. Use the following context to answer the user’s question.
+    Keep your answer **concise and clear (max 4-5 sentences)**.
     If you cannot find the answer in the context, say:
     "Sorry, I couldn't find relevant information."
 
